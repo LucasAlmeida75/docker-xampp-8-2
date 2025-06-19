@@ -1,0 +1,12 @@
+services:
+  xampp:
+    build: .
+    image: xampp
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8000:8000"
+    volumes:
+      - ./php.ini:/opt/lampp/etc/php.ini
+      - ./php_cli.ini:/etc/php/8.2/cli/php.ini
+      - ./htdocs:/opt/lampp/htdocs
